@@ -4,11 +4,11 @@
  * main - entry point
  * @argc: int entry
  * @argv: char entry
- * @glob: global variable
+ * @environ: global variable
  * Return: 0
  */
 
-int main(int argc, char **argv, char **glob)
+int main(int argc, char **argv, char **environ)
 {
 	char *line = NULL;
 	char *delim = "\t \a\n";
@@ -16,7 +16,7 @@ int main(int argc, char **argv, char **glob)
 	char **tokens;
 	(void)argc;
 
-	tokens = find_path(glob);
+	tokens = find_path(environ);
 
 	signal(SIGINT, SIG_IGN);
 	while (1)

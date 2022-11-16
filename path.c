@@ -6,12 +6,12 @@
  * Return: path in tokens
  */
 
-char **find_path(char **glob)
+char **find_path(char **environ)
 {
 	char *get_path, **tokens, *delim;
 
 	delim = ":";
-	get_path = _getenv(glob, "PATH");
+	get_path = _getenv(environ, "PATH");
 	tokens = splits(get_path, delim);
 	return (tokens);
 }

@@ -15,10 +15,10 @@ int execute(char **parse);
 void _puts(char *str);
 int _putchar(char c);
 unsigned int _strlen(char *s);
-char **find_path(char **environ);
-char *_getenv(char **environ, char *dirname);
+char **find_path(char **glob);
+char *_getenv(char **glob, char *dirname);
 char *args_path(char **parse, char **tokens);
 char *_strdup(char *str);
-char *if_exists(char **environ);
+char *if_exists(char **glob);
 extern char **environ;
 #endif
